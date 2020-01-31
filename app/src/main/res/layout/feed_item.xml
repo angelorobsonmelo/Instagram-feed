@@ -3,14 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp">
 
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView_user"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,14 +21,15 @@
         android:id="@+id/textView_user"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
+        android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/imageView_user"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@id/imageView_more"
         app:layout_constraintStart_toEndOf="@id/imageView_user"
         app:layout_constraintTop_toTopOf="@id/imageView_user"
-        app:layout_constraintEnd_toEndOf="parent"
         tools:text="angelorobsonmelo" />
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -46,8 +48,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="12dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintDimensionRatio="6:6"
+        android:scaleType="fitXY"
+        app:layout_constraintDimensionRatio="11:9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView_user"
@@ -56,9 +58,9 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageView_heart"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_heart_curvy_outline"
         app:layout_constraintBottom_toBottomOf="@id/imageView_comment"
@@ -67,9 +69,9 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageView_comment"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="12dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
         android:scaleType="centerCrop"
         android:src="@drawable/instagram_coment"
         app:layout_constraintStart_toEndOf="@id/imageView_heart"
@@ -77,8 +79,8 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageView_send"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_instagram_send"
         app:layout_constraintStart_toEndOf="@id/imageView_comment"
@@ -86,8 +88,8 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageView_save"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_instagram_save_tag"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,13 +99,13 @@
         android:id="@+id/textView_likes_to"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="2dp"
+        android:text="Curtido por"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="@id/imageView_heart"
-        app:layout_constraintTop_toBottomOf="@id/imageView_save"
-        tools:text="Curtido por" />
+        app:layout_constraintTop_toBottomOf="@id/imageView_save" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView_user_like"
@@ -122,12 +124,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
+        android:text="e"
         android:textSize="16sp"
         android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf=""
         app:layout_constraintStart_toEndOf="@id/textView_user_like"
-        app:layout_constraintTop_toTopOf="@id/textView_user_like"
-        tools:text="e" />
+        app:layout_constraintTop_toTopOf="@id/textView_user_like" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView_other_people"
@@ -142,41 +143,91 @@
         app:layout_constraintStart_toEndOf="@id/textView_and"
         app:layout_constraintTop_toTopOf="@id/textView_and" />
 
+    <LinearLayout
+        android:id="@+id/container_owner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/textView_likes_to"
+        app:layout_constraintTop_toBottomOf="@id/textView_likes_to">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_user_owner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="michaeleferreira" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="16dp"
+            android:maxLines="2"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            tools:text="Prontos para mais um ano letivo produtivo e cheio de alegria?" />
+
+    </LinearLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView_comment_user"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/container_owner"
+        app:layout_constraintTop_toBottomOf="@id/container_owner"
+        tools:src="@tools:sample/avatars" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText_comment_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:hint="@string/add_a_comment"
+        app:layout_constraintBottom_toBottomOf="@id/imageView_comment_user"
+        app:layout_constraintStart_toEndOf="@id/imageView_comment_user"
+        app:layout_constraintTop_toTopOf="@id/imageView_comment_user" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView_icon_love"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_love"
+        app:layout_constraintBottom_toBottomOf="@id/imageView_icon_heart"
+        app:layout_constraintEnd_toStartOf="@id/imageView_icon_heart"
+        app:layout_constraintTop_toTopOf="@id/imageView_icon_heart" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView_icon_heart"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_heart_outline"
+        app:layout_constraintBottom_toBottomOf="@id/editText_comment_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editText_comment_user" />
+
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView_user_owner"
+        android:id="@+id/textView_post_time"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/textView_likes_to"
-        app:layout_constraintTop_toBottomOf="@id/textView_likes_to"
-        tools:text="michaeleferreira" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView_comment"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:maxLines="2"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="@id/textView_user_owner"
-        app:layout_constraintStart_toEndOf="@id/textView_user_owner"
-        app:layout_constraintTop_toTopOf="@id/textView_user_owner"
-        tools:text="Tudo certo com devs android " />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView_read_more"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="@string/read_more"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/textView_comment"
-        app:layout_constraintTop_toTopOf="@id/textView_comment" />
-
+        app:layout_constraintStart_toStartOf="@id/imageView_comment_user"
+        app:layout_constraintTop_toBottomOf="@id/imageView_comment_user"
+        tools:text="Há 32 minutos" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
