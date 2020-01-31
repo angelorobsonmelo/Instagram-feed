@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="16dp">
+    android:layout_marginBottom="8dp">
 
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView_user"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -60,7 +60,7 @@
         android:id="@+id/imageView_heart"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_heart_curvy_outline"
         app:layout_constraintBottom_toBottomOf="@id/imageView_comment"
@@ -125,6 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="e"
+        android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="italic"
         app:layout_constraintStart_toEndOf="@id/textView_user_like"
@@ -147,7 +148,7 @@
         android:id="@+id/container_owner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="@id/textView_likes_to"
@@ -181,7 +182,7 @@
         android:id="@+id/imageView_comment_user"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@id/container_owner"
         app:layout_constraintTop_toBottomOf="@id/container_owner"
         tools:src="@tools:sample/avatars" />
