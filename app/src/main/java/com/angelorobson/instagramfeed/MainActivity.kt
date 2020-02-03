@@ -34,7 +34,11 @@ class MainActivity : AppCompatActivity() {
             return mutableListOf(
                 Story(R.drawable.jon_snow, "Seu Story"),
                 Story(R.drawable.red_queen, "Red Queen"),
-                Story(R.drawable.sansa, "Sansa Stark")
+                Story(R.drawable.sansa, "Sansa Stark"),
+                Story(R.drawable.tyrion_lannister, "Tyrion Lannister"),
+                Story(R.drawable.bran_stark, "Bran Start"),
+                Story(R.drawable.arya_stark, "Arya Start"),
+                Story(R.drawable.khal_drogo, "Khal Drogo")
             )
         }
 
