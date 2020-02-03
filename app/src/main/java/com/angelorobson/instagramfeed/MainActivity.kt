@@ -82,21 +82,27 @@ class MainActivity : AppCompatActivity() {
 
         fun getSuggestions(): MutableList<Suggestion> = mutableListOf(
             Suggestion(
-                R.drawable.sansa,
-                "Sansa Stark",
+                R.drawable.brienne_de_tarth,
+                "Brienne de Tarth",
                 "Novo no Instagram",
                 "Seguir"
             ),
             Suggestion(
-                R.drawable.tyrion_lannister,
-                "Tyrion Lennister",
+                R.drawable.gregor_clegane,
+                "Gregor Clegane",
                 "Seguido por Red Queen + mais 3 pessoas",
                 "Seguir de volta"
             ),
             Suggestion(
-                R.drawable.khal_drogo,
-                "Khal Drogo",
+                R.drawable.lord_varys,
+                "Lord Varys",
                 "Novo no Instagram",
+                "Seguir de volta"
+            ),
+            Suggestion(
+                R.drawable.robb_stark,
+                "Rob Stark",
+                "Seguido por Sansa + mais 2 pessoas",
                 "Seguir"
             )
         )

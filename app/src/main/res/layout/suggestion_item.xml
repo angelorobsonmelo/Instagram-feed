@@ -4,8 +4,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="16dp"
-    android:layout_marginEnd="16dp"
     android:layout_marginBottom="16sp"
+    android:layout_marginStart="16dp"
     android:orientation="vertical">
 
     <com.google.android.material.card.MaterialCardView
@@ -22,9 +22,10 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/image_user_suggestion"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
                 android:gravity="center"
+                android:scaleType="centerCrop"
                 android:src="@drawable/jon_snow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +34,6 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8sp"
                 android:src="@drawable/ic_close_black_24dp"
                 app:layout_constraintStart_toEndOf="@id/image_user_suggestion"
                 app:layout_constraintTop_toTopOf="@id/image_user_suggestion" />
@@ -42,7 +42,7 @@
                 android:id="@+id/textview_username_suggestion"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
                 android:ellipsize="end"
                 android:gravity="center"
                 android:maxLines="1"
@@ -58,7 +58,6 @@
                 android:id="@+id/textview_info_user_suggestion"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="8dp"
                 android:gravity="center|top"
                 android:text="Seguido por red queen + mais 2 pessoas"
                 android:textColor="@android:color/black"
@@ -71,13 +70,13 @@
                 android:id="@+id/button_suggestion"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:background="@android:color/holo_blue_dark"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:background="@drawable/shape_button"
                 android:text="Seguir de volta"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
-                app:cornerRadius="5dp"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/image_user_suggestion"
                 app:layout_constraintStart_toStartOf="@id/image_user_suggestion"
