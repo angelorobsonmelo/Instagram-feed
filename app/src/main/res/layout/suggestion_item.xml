@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16sp"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16sp"
+            android:layout_marginBottom="16sp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_user_suggestion"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:gravity="center"
+                android:src="@drawable/jon_snow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8sp"
+                android:src="@drawable/ic_close_black_24dp"
+                app:layout_constraintStart_toEndOf="@id/image_user_suggestion"
+                app:layout_constraintTop_toTopOf="@id/image_user_suggestion" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_username_suggestion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="John Snow"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/image_user_suggestion"
+                app:layout_constraintStart_toStartOf="@id/image_user_suggestion"
+                app:layout_constraintTop_toBottomOf="@id/image_user_suggestion" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_info_user_suggestion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Novo no Instagram"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="@id/textview_username_suggestion"
+                app:layout_constraintStart_toStartOf="@id/textview_username_suggestion"
+                app:layout_constraintTop_toBottomOf="@id/textview_username_suggestion" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_suggestion"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="16sp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/holo_blue_dark"
+                android:text="Seguir de volta"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:cornerRadius="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/image_user_suggestion"
+                app:layout_constraintStart_toStartOf="@id/image_user_suggestion"
+                app:layout_constraintTop_toBottomOf="@id/textview_info_user_suggestion" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
