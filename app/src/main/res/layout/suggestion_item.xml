@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
     android:layout_marginBottom="16sp"
     android:orientation="vertical">
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="280dp"
         app:cardCornerRadius="5dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="16sp"
             android:layout_marginBottom="16sp">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/image_user_suggestion"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:gravity="center"
                 android:src="@drawable/jon_snow"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +43,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:ellipsize="end"
                 android:gravity="center"
+                android:maxLines="1"
                 android:text="John Snow"
                 android:textColor="@android:color/black"
                 android:textSize="16sp"
@@ -52,19 +57,21 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/textview_info_user_suggestion"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Novo no Instagram"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center|top"
+                android:text="Seguido por red queen + mais 2 pessoas"
                 android:textColor="@android:color/black"
+                android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="@id/textview_username_suggestion"
                 app:layout_constraintStart_toStartOf="@id/textview_username_suggestion"
                 app:layout_constraintTop_toBottomOf="@id/textview_username_suggestion" />
 
-            <com.google.android.material.button.MaterialButton
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_suggestion"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
-                android:layout_marginTop="16sp"
+                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:background="@android:color/holo_blue_dark"
                 android:text="Seguir de volta"
