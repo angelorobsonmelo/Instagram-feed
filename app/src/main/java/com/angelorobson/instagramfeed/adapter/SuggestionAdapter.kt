@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.angelorobson.instagramfeed.R
 import com.angelorobson.instagramfeed.model.Suggestion
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.story_item.view.*
 import kotlinx.android.synthetic.main.suggestion_item.view.*
 
 class SuggestionAdapter(private val suggestions: List<Suggestion>) :
@@ -31,7 +33,10 @@ class SuggestionHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     fun bind(suggestion: Suggestion) {
         with(itemView) {
-            image_user_suggestion.setImageResource(suggestion.imageUser)
+            Picasso.get()
+                .load(suggestion.imageUser)
+                .into(image_user_suggestion)
+
             textview_username_suggestion.text = suggestion.username
             textview_info_user_suggestion.text = suggestion.userInfo
             button_suggestion.text = suggestion.textButton

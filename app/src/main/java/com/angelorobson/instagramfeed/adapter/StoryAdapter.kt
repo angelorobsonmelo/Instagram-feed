@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.angelorobson.instagramfeed.R
 import com.angelorobson.instagramfeed.model.Story
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.feed_item.view.*
 import kotlinx.android.synthetic.main.story_item.view.*
 
 class StoryAdapter(private val stories: List<Story>) : RecyclerView.Adapter<StoryViewHolder>() {
@@ -32,7 +34,10 @@ class StoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(story: Story) {
         with(itemView) {
-            imageView_story.setImageResource(story.userImage)
+            Picasso.get()
+                .load(story.userImage)
+                .into(imageView_story)
+
             textView_username.text = story.username
         }
     }

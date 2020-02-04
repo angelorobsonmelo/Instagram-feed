@@ -61,15 +61,6 @@ class MainActivity : AppCompatActivity() {
                 "Há 3 horas"
             ),
             Post(
-                R.drawable.red_queen,
-                "Red Queen",
-                R.drawable.post_2,
-                "Jonh Snow",
-                "I am the queen!",
-                R.drawable.jon_snow,
-                "Há 3 horas"
-            ),
-            Post(
                 R.drawable.sansa,
                 "Sansa Stark",
                 R.drawable.post_3,
